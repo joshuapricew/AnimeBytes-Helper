@@ -45,15 +45,15 @@ std::string days(int d, short h)
 void formatAndPrintSeedTime(int seedTime)
 {
 	int seedDays{ seedTime / constants::hoursInADay };
-	int seedHours{ seedTime % constants::hoursInADay };
+	short seedHours{ seedTime % constants::hoursInADay };
 	std::cout << "Minimum seed time: " << days(seedDays, seedHours) << " or: " << seedTime << " hours" << '\n';
 }
 
 void formatAndPrintGracePeriod(int gracePeriod)
 {
-	int seedDays = gracePeriod / constants::hoursInADay;
-	int seedHours = gracePeriod % constants::hoursInADay;
-	std::cout << "Grace period: " << days(seedDays, seedHours) << " or: " << gracePeriod << " hours" << '\n';
+	int graceDays = gracePeriod / constants::hoursInADay;
+	short graceHours = gracePeriod % constants::hoursInADay;
+	std::cout << "Grace period: " << days(graceDays, graceHours) << " or: " << gracePeriod << " hours" << '\n';
 }
 
 // --- AnimeBytes Helper Functions ---
