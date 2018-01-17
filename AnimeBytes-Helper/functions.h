@@ -1,9 +1,9 @@
 #pragma once
 
 void end();
-double getValueFromUser();
-int calcSeedTime(int gigabytes);
-std::string days(int d, int h);
+float getValueFromUser();
+int calcSeedTime(float gigabytes);
+std::string days(int d, short h);
 void formatAndPrintSeedTime(int seedTime);
 void formatAndPrintGracePeriod(int gracePeriod);
 
