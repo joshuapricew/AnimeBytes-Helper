@@ -8,17 +8,17 @@ void end()
 	std::cout << '\n' << "Press enter to continue . . . "; std::cin.clear(); std::cin.ignore(32767, '\n'); std::cin.get();
 }
 
-double getValueFromUser() 
+float getValueFromUser() 
 {
-	double gigabytes{};
+	float gigabytes{};
 	std::cin >> gigabytes;
 	return gigabytes;
 }
 
-int calcSeedTime(int gigabytes)
+int calcSeedTime(float gigabytes)
 {
 	// If torrent is under 10GB the minimum seed time is always 72 hours.
-	if (gigabytes <= 10)
+	if (gigabytes <= 10.0f)
 		return constants::baseSeedHours;
 	else
 	{
@@ -30,7 +30,7 @@ int calcSeedTime(int gigabytes)
 }
 
 // Correctly pluralises and omits strings
-std::string days(int d, int h)
+std::string days(int d, short h)
 {
 	std::string days{ std::to_string(d) };
 	std::string hours{ std::to_string(h) };
