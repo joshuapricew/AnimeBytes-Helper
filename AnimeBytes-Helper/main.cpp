@@ -12,10 +12,10 @@ int main()
 		<< '\n'
 		<< "Seeding Time Calculator\n"
 		<< "How many gigabytes is the torrent?\n";
-	double gigabytes{ getValueFromUser() };
+	float gigabytes{ getValueFromUser() };
 	std::cout << '\n';
-
-	int seedTime{ calcSeedTime((int)gigabytes) };
+	
+	int seedTime{ calcSeedTime(gigabytes) };
 	formatAndPrintSeedTime(seedTime);
 
 	int gracePeriod{ seedTime * constants::gracePeriodMultiplier };
