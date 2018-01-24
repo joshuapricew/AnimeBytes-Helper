@@ -12,7 +12,7 @@ int main()
 		<< '\n'
 		<< "Seeding Time Calculator\n"
 		<< "How many gigabytes is the torrent?\n";
-	float gigabytes{ getValueFromUser() };
+	double gigabytes{ getValueFromUser() };
 	std::cout << '\n';
 	
 	int seedTime{ calcSeedTime(gigabytes) };
